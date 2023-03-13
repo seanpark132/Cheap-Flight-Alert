@@ -13,7 +13,7 @@ By default, the following parameters are used when searching for flights from th
 * Flight Type: round trip
 * Maximum layovers: 1
 
-If the prices of these tickets are lower than the historical low prices from the Google sheet, the program wiill email all signed-up users with important flight 
+If the prices of these tickets are lower than the historical low prices from the Google sheet, the program will email all signed-up users with important flight 
 information and a link to book the flight. Users can sign-up to be emailed by running "sign_up.py" and entering their name and email. Their names and emails are
 stored in the "users" tab in the Google sheet. 
 
