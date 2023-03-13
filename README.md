@@ -17,4 +17,6 @@ If the prices of these tickets are lower than the historical low prices from the
 information and a link to book the flight. Users can sign-up to be emailed by running "sign_up.py" and entering their name and email. Their names and emails are
 stored in the "users" tab in the Google sheet. 
 
+![Error loading image](images/cheap_flight_finder.PNG?raw=true "Example email")
+
 Before running the program, a valid Tequila API key must be input in the .env.txt file (teq_api_key). 
