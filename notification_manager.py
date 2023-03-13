@@ -3,26 +3,13 @@
 
 import os
 from dotenv import load_dotenv
-from twilio.rest import Client
 import smtplib
 
 load_dotenv(".env.txt")
-TWILIO_ACCOUNT_SID = os.getenv("twilio_account_sid")
-TWILIO_AUTH_TOKEN = os.getenv("twilio_auth_token")
-TWILIO_PHONE = "+12764448814"
-MY_NUMBER = os.getenv("my_number")
 my_email = os.getenv("my_email")
 email_password = os.getenv("email_password")
 
 class NotificationManager:
-
-    def send_text(self, full_text):
-        tw_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
-        message = tw_client.messages.create(
-            body=full_text,
-            from_=TWILIO_PHONE,
-            to=MY_NUMBER
-        )
 
     def send_emails(self, user_info, flight_link, full_text):
         for user in user_info:

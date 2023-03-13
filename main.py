@@ -38,5 +38,4 @@ for flight_info in flight_info_list:
                 f" from {from_date} to {to_date}"
     for row in destination_info:
         if destination_code == row["iataCode"] and price < row["historicalLowPrice"]:
-            alerter.send_text(full_text)
             alerter.send_emails(user_info, flight_link, full_text)
