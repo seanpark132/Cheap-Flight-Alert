@@ -22,7 +22,7 @@ if destination_info[-1]["iataCode"] == "":
 flight_info_list = searcher.tequila_search(destination_info)
 
 # For each flight from the search, check if it's price is lower than the price cutoff from the Google sheet
-# If the price is lower, send a text and email all signed-up users
+# If the price is lower, email all signed-up users
 for flight_info in flight_info_list:
     destination_code = flight_info["cityCodeTo"]
     price = flight_info["price"]
