@@ -6,8 +6,8 @@ from dotenv import load_dotenv
 import smtplib
 
 load_dotenv(".env.txt")
-my_email = os.getenv("my_email")
-email_password = os.getenv("email_password")
+sending_email = os.getenv("sending_email")
+sending_pass = os.getenv("sending_pass")
 
 class NotificationManager:
 
@@ -17,9 +17,9 @@ class NotificationManager:
 
             with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
                 connection.starttls()
-                connection.login(user=my_email, password=email_password)
+                connection.login(user=sending_email, password=sending_pass)
                 connection.sendmail(
-                    from_addr=my_email,
+                    from_addr=sending_email,
                     to_addrs=user_email,
                     msg=f"Subject: New Low Price Flight!\n\n{full_text}.\nLink:{flight_link}".encode('utf-8')
                 )
